@@ -24,6 +24,6 @@ elif operation == "**":
 else:
     result = "Operator is not recognized"
 print("-------------------------------------------------")
-print("|RESULT:", num1 , operation, num2, "=" , result,"                        |")
+print("|RESULT:", num1 , operation, num2, "=" , result,"                               |")
 print("-------------------------------------------------")
 
