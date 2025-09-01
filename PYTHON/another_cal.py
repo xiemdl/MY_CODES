@@ -43,5 +43,5 @@ for c in range(5):
         result = "Operator is not recognized"
 
     print("-------------------------------------------------")
-    print(f"| RESULT #{c+1}: {num1} {operation} {num2} = {result}")
+    print(f"| RESULT : {c+1}: {num1} {operation} {num2} = {result}")
     print("-------------------------------------------------")
