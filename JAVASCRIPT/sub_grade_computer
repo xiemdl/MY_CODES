@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st ACT!</title>
+</head>
+<body>
+<script>
 
+    function displayMe(text){
+        let textValue = document.getElementById('text').value;
+        let textValue1 = document.getElementById('sub1').value;
+        let textValue2= document.getElementById('sub2').value;
+        let textValue3= document.getElementById('sub3').value;
+        let textValue4= document.getElementById('sub4').value;
+        let textValue5= document.getElementById('sub5').value;
+        let total = Number(textValue1)+ Number(textValue2)+ Number(textValue3)+Number(textValue4)+Number(textValue5);
+        Total = total / 5
+
+        alert("Name:" + textValue + "\n" + "IP1: " + textValue1 + "\n" + "IM1: " + textValue2 + "\n" + "OOP: " + textValue3 + "\n" + "EDP: " + textValue4 + "\n" + "HCI2: " + textValue5 + "\n" + "Average: " + Total); 
+        
+    }
+
+</script>
+<p>Name: <input type="text" name="fullname" id="text"></p>
+<p>GRADE:</p>
+<p>IP1:</p><input type="value1" id="sub1">
+<p>IM1:</p><input type="value2" id="sub2">
+<p>OOP:</p><input type="value3" id="sub3">
+<p>EDP:</p><input type="value4" id="sub4">
+<p>HCI2:</p><input type="value5"id="sub5">
+<br>
+
+<button onclick="displayMe()">COMPUTE</button>
+
+
+<!-- <p>IP1: <input type= "string"></p>
+<p>IM1: <input type= "string"></p>
+<p>OOP: <input type= "string"></p>
+<p>EDP: <input type= "string"></p>
+<p>HC2: <input type= "string"></p> -->
+
+
+
+    
+</body>
+</html>
