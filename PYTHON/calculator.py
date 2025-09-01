@@ -8,22 +8,23 @@ print("-------------------------------------------------")
 operation = input("| Enter an operation (+, -, *, /,//, %, **): ")
 
 if operation == "+":
-    result = float(num1) + float(num2)
+    result = int(num1) + int(num2)
 elif operation == "-":
-    result = float(num1) - float(num2)
+     result = int(num1) - int(num2)
 elif operation == "*":
-    result = float(num1) * float(num2)
+     result = int(num1) * int(num2)
 elif operation == "/":
-    result = float(num1) / float(num2)
+     result = int(num1) / int(num2)
 elif operation == "//":
-    result = float(num1) // float(num2)
+     result = int(num1) // int(num2)
 elif operation == "%":
-    result = float(num1) % float(num2)
+     result = int(num1) % int(num2)
 elif operation == "**":
-    result = float(num1) ** float(num2)
+     result = int(num1) ** int(num2)
 else:
-    result = "Operator is not recognized"
+     result = "Operator is not recognized"
+     
 print("-------------------------------------------------")
-print("|RESULT:", num1 , operation, num2, "=" , result,"                               |")
+print("|RESULT:", num1 , operation, num2, "=" , result,"                        |")
 print("-------------------------------------------------")
 
