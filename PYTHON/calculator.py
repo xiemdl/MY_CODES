@@ -1,38 +1,46 @@
-# Display program header
+
 print("-------------------------------------------------")
 print("| --------------CALCULATOR_DOMINGO------------- |")
 print("-------------------------------------------------")
 
-# Ask user for the first number
-num1 = input("| Enter 1st number: ")
-print("-------------------------------------------------")
+while True:
+    try:
+        num1 = float(input("| Enter the 1st number: "))
+        num2 = float(input("| Enter the 2nd number: "))
+        break  
+    except ValueError:
+        print("-------------------------------------------------")
+        print("| Invalid input. Please enter valid numbers.    |")
+        print("-------------------------------------------------")
 
-# Ask user for the second number
-num2 = input("| Enter 2nd number: ")
-print("-------------------------------------------------")
 
-# Ask user for the operation
-operation = input("| Enter an operation (+, -, *, /, //, %, **): ")
-
-# Perform calculation based on operator
+operation = input("| Enter an operation (+, -, *, /, %, **): ")
+while operation not in ["+", "-", "*", "/", "%", "**"]:
+    print("-------------------------------------------------")
+    operation = input("| Invalid operation. Please enter one of (+, -, *, /, %, **): ")
+    
 if operation == "+":
-    result = int(num1) + int(num2)   # Addition
+    result = num1 + num2
 elif operation == "-":
-    result = int(num1) - int(num2)   # Subtraction
+    result = num1 - num2
 elif operation == "*":
-    result = int(num1) * int(num2)   # Multiplication
+    result = num1 * num2
 elif operation == "/":
-    result = int(num1) / int(num2)   # Division
-elif operation == "//":
-    result = int(num1) // int(num2)  # Floor Division
+    if num2 == 0:
+        result = "Error: Division by zero!"
+    else:
+        result = num1 / num2
 elif operation == "%":
-    result = int(num1) % int(num2)   # Modulus
+    if num2 == 0:
+        result = "Error: Modulus by zero!"
+    else:
+        result = num1 % num2
 elif operation == "**":
-    result = int(num1) ** int(num2)  # Exponentiation / Power
+    result = num1 ** num2
 else:
-    result = "Operator is not recognized"
-
-# Display the result
+    result = "Operator is not valid. Please try again."
 print("-------------------------------------------------")
 print(f"| RESULT: {num1} {operation} {num2} = {result} |")
 print("-------------------------------------------------")
+
+print("| Thank you for using the calculator :)         |")
