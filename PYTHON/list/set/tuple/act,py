@@ -9,18 +9,20 @@ while True:
     print("1.ADD ITEMS")
     print("2.DELETE ITEMS")
     print("3.DISPLAY THE ITEMS")
-    
-    pick_me = input("ENTER YOUR CHOICE:")
-    
+    print("4.EXIT")
+
+    pick_me = input("ENTER YOUR CHOICE: ")
+
     if pick_me == '1':
-        item = input("ENTER THE TYPE OF MEAT:")
+        item = input("ENTER THE TYPE OF MEAT: ")
         meat.append(item)
         
     elif pick_me == '2':
-        delete = input("ENTER THE ITEM TO DELETE:")
+        delete = input("ENTER THE ITEM TO DELETE: ")
         if delete in meat:
             meat.remove(delete)
-            print(f'{delete},{meat}')
+            print(f'ITEM REMOVED: {delete}')
+            print(f'CURRENT MEAT LIST: {meat}')
             
     elif pick_me == '3':
          if meat:
@@ -29,5 +31,10 @@ while True:
                 print(f"{c+1}. {item}")
                 
     else:
-        print("MALI SU PIG INPUT MO NA CHOICE (1-3) LNG PO!")
+        if pick_me == '4':
+            print("THANK YOU FOR USING THE MEAT GROCERY LIST!")
+            break
+        else:
+            print("MALI SU PIG INPUT MO NA CHOICE (1-4) LNG PO!")
+            break
         
