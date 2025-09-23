@@ -1,1 +1,0 @@
-print(empty_set)
