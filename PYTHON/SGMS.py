@@ -33,7 +33,7 @@ def print_result(name, grades, average, letter, stat):
     print(f"GRADES: {grades}")
     print(f"AVERAGE: {average:.2f}")
     print(f"LETTER GRADE: {letter}")
-    print(f"STATUS: {status}")
+    print(f"STATUS: {stats}")
 
 
 name = input("ENTER STUDENT NAME: ")
@@ -42,6 +42,6 @@ grades = [int(g.strip()) for g in grades_input.split(",") if g.strip().isdigit()
 
 average = calculate_ave(grades)
 letter = letter_ave(average)
-status = status(letter)
+stats = status(letter)
 
-print_result(name, grades, average, letter, status)
+print_result(name, grades, average, letter, stats)
