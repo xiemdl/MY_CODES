@@ -35,7 +35,7 @@ class AgeChecker extends UserProfile {
     }
 
     checkAge(){
-        if (this.age >= 25){
+        if (this.age <= 25){
             console.log("You are an adult.");
         } else {
             console.log("You are not an adult.");

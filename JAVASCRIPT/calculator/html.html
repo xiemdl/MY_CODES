@@ -2,20 +2,11 @@
 <html>
 <head>
   <title>Simple JS Calculator</title>
-  <style>
-  body {
-    font-family: Arial;
-    margin: 40px;
-  }
-  input, select {
-    margin: 5px;
-    padding: 5px;
-  }
-</style>
+  <link rel="stylesheet" href="css.css">
 </head>
 <body>
-  <h2>Calculator_DOMINGO</h2>
-  <div>
+  <div class="main-container">
+    <h2>Calculator</h2>
     <input type="number" id="num1" placeholder="Enter 1st number">
     <input type="number" id="num2" placeholder="Enter 2nd number">
     <select id="operation">
@@ -27,8 +18,8 @@
       <option value="**">**</option>
     </select>
     <button onclick="calculate()">Calculate</button>
+    <h3 id="result">Result: </h3>
   </div>
-  <h3 id="result">Result: </h3>
   
   <script src="js.js"></script>
 
