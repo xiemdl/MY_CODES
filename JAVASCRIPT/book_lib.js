@@ -1,4 +1,6 @@
+// this code defines a simple library system where you can add books, list them, and toggle their read status.
 
+// This class represents a book in the library.
 class Book {
     constructor(title, author, yearPublished, isread){
         this.title = title;
@@ -7,37 +9,47 @@ class Book {
         this.isread = isread;
     }
 
+    // Method to get book details
     getDetails(){
         return `${this.title} by ${this.author}, published in ${this.yearPublished}. Read: ${this.isread}`;
     }
 }
 
+// This class represents the library which contains multiple books.
 class Library {
     constructor(){
-        this.Book =  [];
+        this.books =  [];
     }
 
-    addBook(Book) {
-        this.Book.push(Book);
+    // Method to add a book to the library
+    addBook(book) {
+        this.books.push(book);
     }
 
+    // Method to list all books in the library
     listBooks(){
-        this.Book.forEach(Book => {
-            console.log(Book.getDetails());
+        this.books.forEach(book => {
+            console.log(book.getDetails());
         });
     }
 
+    // Method to toggle the read status of a book by title
     toggleReadStatus(title) {
-        const Book = this.Book.find(b => b.title === title);
-        if (Book) {
-            Book.isread = !Book.isread;
-            console.log(`Read status of "${title}" is now ${Book.isread}`);
+        // Find the book by title
+        const book = this.books.find(b => b.title === title);
+        // If found, toggle its read status
+        if (book) {
+            book.isread = !book.isread;
+            console.log(`Read status of "${title}" is now ${book.isread}`);
+        // If not found, log a message
         } else {
             console.log(`Book titled "${title}" not found.`);
         }
     }
 
 }
+
+
 
 const myLibrary = new Library();
 

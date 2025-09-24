@@ -1,8 +1,10 @@
 // "Lucky Draw" Game
+// Prompt user for their name and a number between 1 and 10
 let name = prompt("Enter your name:");
 let randomNumber = parseInt (prompt("Enter a number between 1 and 10:"));
 let number = Math.floor(Math.random() * 10) + 1;
 
+// Check if the user's number matches the randomly generated number
 if (randomNumber == number) {
     console.log(`Congrats ${name}, you won!`)
 } else {
@@ -13,11 +15,14 @@ if (randomNumber == number) {
 let numbers = [];
 let count = parseInt(prompt("How many numbers do you want to enter?"));
 
+
+// Collect numbers from the user
 for (let i = 0; i < count; i++) {
     let num = parseInt(prompt(`Enter number ${i + 1}:`));
     numbers.push(num);
 }
 
+// Find and display the largest number
 let largest = Math.max(...numbers);
 console.log(`The largest number is: ${largest}`);
 console.log(`The numbers you entered are: ${numbers}`);
@@ -26,6 +31,7 @@ console.log(`The numbers you entered are: ${numbers}`);
 let names = [];
 let birthDates = [];
 
+// Collect names and birth dates for 2 people
 for (let c = 0; c < 2; c++) {
   let name = prompt(`Enter name for person ${c + 1}:`);
   let birthYear = parseInt(prompt("Enter your birth year:"));

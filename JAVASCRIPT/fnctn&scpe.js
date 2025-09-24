@@ -1,4 +1,8 @@
 // Calculator Function
+// function that has 3 parameters: num1, num2, operate
+// perform the operation based on the operator provided
+// return the result of the operation
+// handle division by zero and invalid operators
 function calculate( num1, num2, operate){
     if (operate === '+' ){
         return num1 + num2;

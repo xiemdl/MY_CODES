@@ -8,8 +8,10 @@
 // }
 
 // correcte version
+
 let num = parseInt(prompt("Enter a number:"));  
 
+// loop from 1 to the entered number
 for (let s = 1; s<= num; s++){
  if (s % 2 === 0) 
         continue;
