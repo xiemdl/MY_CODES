@@ -31,8 +31,8 @@ while True:
             #     print(f"{c+1}. {item}")
         
             
-        with open("./meatf/my_meat.json","r") as f:
-            data = json.load(f)
+        with open("./PYTHON/JSON/my_meat.json","r") as s:
+            data = json.load(s)
         print("Reading:", data)
             
                 
@@ -45,9 +45,9 @@ while True:
             
             c = json.loads(convert_to_json)
             print(c)
-            
-            with open("./meatf/my_meat.json", "w") as f:
-                json.dump(c,f)
+
+            with open("./PYTHON/JSON/my_meat.json", "w") as s:
+                json.dump(c,s)
                 
             break
         else:
