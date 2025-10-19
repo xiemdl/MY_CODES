@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUTPUT</title>
-
-    <script src="./Simple _User Profile_App.js"></script>
 </head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 60px;
+  background-color: #f4f4f4;
+  color:black;
+}
+
+#card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+</style>
 <body>
+    <h1>MY PROFILE</h1>
+    <div class="card">
+        <p id="name">Name:</p>
+        <p id="hobby">Hobby:</p>
+        <p id="color">Favorite Color:</p>
+    </div>
+
+    <button id="Update">Update Profile</button>
+    <button id="Reset">Reset Profile</button>
     
+    <script src="./DOM_mnpltn.js"></script>
 </body>
 </html>
