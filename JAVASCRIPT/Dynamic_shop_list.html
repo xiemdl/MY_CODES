@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSL</title>
+</head>
+<body>
+    <h1>DYNAMIC SHOPPING LIST</h1>
+
+    <div id="shop_list">
+        <input type="text" id="item_input" placeholder="Enter item">
+        <button id="add_item">Add Item</button>
+        <button id="delete_item">Delete Item</button>
+        <button id="display_items">Display Items</button>
+        <ul id="items"></ul>
+    </div>
+
+    <input id="name" placeholder="Enter your name">
+<button id="show">Show Name</button>
+<p id="output"></p>
+
+    <script>
+        const input_item = document.getElementById("item_input");
+        const add_button = document.getElementById("add_item");
+        const delete_button = document.getElementById("delete_item");
+        const display_button = document.getElementById("display_items");
+        const item_list = document.getElementById("items");
+
+        // Add Item
+        add_button.addEventListener("click", () => {
+            const item = input_item.value.trim();
+            if (item) {
+                const li = document.createElement("li");
+                li.textContent = item;
+                item_list.appendChild(li);
+                input_item.value = "";
+            } else {
+                alert("Please enter an item name!");
+            }
+        });
+
+        // Delete Item
+        delete_button.addEventListener("click", () => {
+            const item = input_item.value.trim();
+            const items = item_list.getElementsByTagName("li");
+            for (let s = 0; s < items.length; s++) {
+                if (items[s].textContent === item) {
+                    item_list.removeChild(items[s]);
+                    input_item.value = "";
+                    return;
+                }
+            }
+            alert("Item not found!");
+        });
+
+        // Display Items
+        display_button.addEventListener("click", () => {
+            const items = item_list.getElementsByTagName("li");
+            let itemArray = [];
+            for (let s = 0; s < items.length; s++) {
+                itemArray.push(items[s].textContent);
+            }
+            if (itemArray.length === 0) {
+                alert("Shopping list is empty!");
+            } else {
+                alert("Shopping List:\n" + itemArray.join("\n"));
+            }
+        });
+
+        const input = document.querySelector("#name");
+const button = document.querySelector("#show");
+const output = document.querySelector("#output");
+
+button.addEventListener("click", function() {
+    if (input.value !== "") {
+        output.textContent = "Hello, " + input.value + "!";
+  // show the name
+}
+});
+    </script>
+</body>
+</html>
